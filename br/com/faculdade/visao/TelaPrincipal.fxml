@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="br.com.faculdade.visao.TelaPrincipalController"
+      spacing="10" padding="15">
+
+    <HBox spacing="10">
+        <Label text="ID da Turma:"/>
+        <TextField fx:id="txtIdTurma" promptText="Digite o ID da turma" />
+        <Button text="Buscar Alunos" onAction="#handleBuscarAlunos"/>
+    </HBox>
+
+    <TableView fx:id="tabelaAlunos" prefHeight="400" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="colunaId" text="ID" prefWidth="100" />
+            <TableColumn fx:id="colunaNome" text="Nome Completo" prefWidth="500" />
+        </columns>
+    </TableView>
+
+</VBox>
