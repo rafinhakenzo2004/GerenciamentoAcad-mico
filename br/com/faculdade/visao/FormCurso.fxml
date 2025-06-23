@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+
+    <center>
+        <GridPane hgap="10" vgap="10" padding="20">
+            <Label text="Código:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <TextField fx:id="txtCodigo" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+            <Label text="Nome:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <TextField fx:id="txtNome" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+            <Label text="Descrição:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <TextArea fx:id="txtDescricao" prefRowCount="3" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+            <Label text="Coordenador:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+            <ComboBox fx:id="comboCoordenador" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" padding="10" alignment="CENTER_RIGHT">
+            <Button fx:id="btnSalvar" text="Salvar" />
+            <Button fx:id="btnCancelar" text="Cancelar" />
+        </HBox>
+    </bottom>
+
+</BorderPane>
