@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.faculdade.visao.RealizarMatriculaController">
+
+    <center>
+        <VBox spacing="15" padding="20">
+
+            <!-- Campo para ID do Aluno -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="ID do Aluno:"/>
+                <TextField fx:id="txtIdAluno" prefWidth="150"/>
+                <Button text="Buscar Aluno" onAction="#handleBuscarAluno"/>
+                <Label fx:id="lblNomeAluno" text="..." style="-fx-font-weight: bold;"/>
+            </HBox>
+
+            <!-- Campo para ID da Turma -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="ID da Turma:"/>
+                <TextField fx:id="txtIdTurma" prefWidth="150"/>
+                <Button text="Buscar Turma" onAction="#handleBuscarTurma"/>
+                <Label fx:id="lblNomeDisciplina" text="..." style="-fx-font-weight: bold;"/>
+            </HBox>
+
+            <!-- Botão Confirmar Matrícula -->
+            <HBox alignment="CENTER_RIGHT">
+                <Button fx:id="btnConfirmarMatricula"
+                        text="Confirmar Matrícula"
+                        onAction="#handleConfirmarMatricula"
+                        disable="true"/>
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>
