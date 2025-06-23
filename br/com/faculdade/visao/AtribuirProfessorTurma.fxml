@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="br.com.faculdade.visao.AtribuirProfessorTurmaController"
+      spacing="10" padding="15">
+
+    <!-- Busca Turma -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Código da Turma:"/>
+        <TextField fx:id="txtCodigoTurma" promptText="Ex: PROG1-2025.1" />
+        <Button text="Buscar Turma" onAction="#handleBuscarTurma"/>
+    </HBox>
+
+    <!-- Detalhes da Turma -->
+    <GridPane hgap="10" vgap="5">
+        <Label text="Disciplina:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="lblDisciplina" text="..." GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        
+        <Label text="Semestre:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="lblSemestre" text="..." GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        
+        <Label text="Professor Atual:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="lblProfessorAtual" text="..." GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!-- Busca Professor -->
+    <HBox spacing="10" alignment="CENTER_LEFT" padding="10 0 0 0">
+        <Label text="Buscar Professor:"/>
+        <TextField fx:id="txtBuscaProfessor" promptText="Digite nome para filtrar" onKeyReleased="#handleFiltrarProfessores"/>
+    </HBox>
+
+    <!-- Lista de Professores -->
+    <TableView fx:id="tabelaProfessores" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colNomeProfessor" text="Nome" prefWidth="300"/>
+            <TableColumn fx:id="colTitulacao" text="Titulação" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <!-- Botão Atribuir -->
+    <Button fx:id="btnAtribuirProfessor" text="Atribuir Professor Selecionado" onAction="#handleAtribuirProfessor" disable="true"/>
+
+</VBox>
